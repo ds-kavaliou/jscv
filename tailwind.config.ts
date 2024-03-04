@@ -2,8 +2,24 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  corePlugins: {
+    container: false,
+  },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: [
+          "Ubuntu",
+          "Lucida Sans",
+          "Lucida Sans Regular",
+          "Lucida Grande",
+          "Lucida Sans Unicode",
+          "Geneva",
+          "Verdana",
+          "sans-serif",
+        ],
+      },
+    },
   },
   plugins: [],
 } satisfies Config;
